@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&#26412;&#22320; BTC &#34892;&#24773;&#30475;&#30424;</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/vendor/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <main class="tv-shell">
+      <header class="topbar">
+        <div class="logo-pill">X</div>
+
+        <div id="watchlist" class="symbol-strip" aria-label="watchlist"></div>
+
+        <div class="divider"></div>
+
+        <div class="interval-strip" aria-label="intervals">
+          <button class="top-button" type="button" data-interval="1m">1m</button>
+          <button class="top-button" type="button" data-interval="5m">5m</button>
+          <button class="top-button" type="button" data-interval="15m">15m</button>
+          <button class="top-button" type="button" data-interval="30m">30m</button>
+          <button class="top-button" type="button" data-interval="1h">1H</button>
+          <button class="top-button" type="button" data-interval="4h">4H</button>
+          <button class="top-button" type="button" data-interval="1d">1D</button>
+          <button class="top-button" type="button" data-interval="1w">1W</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <button id="undoButton" class="icon-button" type="button" title="&#25764;&#22238;">&#8630;</button>
+        <button id="redoButton" class="icon-button" type="button" title="&#37325;&#20570;">&#8631;</button>
+        <button id="refreshButton" class="icon-button" type="button" title="&#21047;&#26032;">&#8635;</button>
+        <button id="liveToggleButton" class="icon-button active" type="button" title="&#23454;&#26102;&#34892;&#24773;">&#9889;</button>
+        <button id="strategyToggleButton" class="icon-button active" type="button" title="ATR&#31574;&#30053;&#25351;&#26631;">ATR</button>
+        <button id="strategySettingsButton" class="icon-button" type="button" title="ATR&#35774;&#32622;">&#9881;</button>
+        <button id="secondaryToggleButton" class="icon-button" type="button" title="&#24038;&#21491;&#20998;&#23631;">&#9638;</button>
+        <select id="secondaryIntervalSelect" class="compact-select" title="&#21103;&#22270;&#21608;&#26399;">
+          <option value="1h">1H</option>
+          <option value="4h">4H</option>
+          <option value="1d">1D</option>
+        </select>
+
+        <div class="divider"></div>
+
+        <input id="priceLineInput" class="top-input" inputmode="decimal" placeholder="line" />
+        <button id="addPriceLineButton" class="icon-button" type="button" title="&#28155;&#21152;&#20215;&#26684;&#32447;">&#8213;</button>
+        <input id="alertInput" class="top-input" inputmode="decimal" placeholder="alert" />
+        <button id="alertAboveButton" class="icon-button" type="button" title="&#19978;&#31359;&#25253;&#35686;">&gt;</button>
+        <button id="alertBelowButton" class="icon-button" type="button" title="&#19979;&#30772;&#25253;&#35686;">&lt;</button>
+
+        <div class="top-spacer"></div>
+
+        <button id="screenshotButton" class="icon-button" type="button" title="&#25130;&#22270;">&#9673;</button>
+        <button id="deleteSelectedButton" class="icon-button" type="button" title="&#21024;&#38500;&#36873;&#20013;">Del</button>
+        <button class="trade-button" type="button">&#20132;&#26131;</button>
+      </header>
+
+      <div class="terminal-row">
+        <aside class="tool-rail" aria-label="drawing tools">
+          <button id="cursorButton" class="rail-button active" type="button" title="&#20809;&#26631;">&#10010;</button>
+          <button id="drawTrendButton" class="rail-button" type="button" title="&#36235;&#21183;&#32447;">&#9585;</button>
+          <button id="drawHLineButton" class="rail-button" type="button" title="&#27700;&#24179;&#32447;">&#9472;</button>
+          <button id="drawRectButton" class="rail-button" type="button" title="&#30697;&#24418;">&#9633;</button>
+          <button id="drawArrowButton" class="rail-button" type="button" title="&#31661;&#22836;">&#8599;</button>
+          <button id="drawTextButton" class="rail-button" type="button" title="&#25991;&#23383;">T</button>
+          <button id="markBuyButton" class="rail-button buy" type="button" title="&#20080;&#28857;&#26631;&#35760;">B</button>
+          <button id="markSellButton" class="rail-button sell" type="button" title="&#21334;&#28857;&#26631;&#35760;">S</button>
+          <button id="markEventButton" class="rail-button event" type="button" title="&#20107;&#20214;&#26631;&#35760;">E</button>
+          <button id="clearMarksButton" class="rail-button" type="button" title="&#28165;&#38500;&#26631;&#35760;">&#9003;</button>
+          <button id="clearDrawingsButton" class="rail-button" type="button" title="&#28165;&#38500;&#30011;&#32447;">&#128465;</button>
+        </aside>
+
+        <section id="chartArea" class="chart-area">
+          <section class="chart-panel">
+            <div class="chart-overlay">
+              <div class="headline">
+                <strong id="chartTitle">BTCUSDT 15m</strong>
+                <span id="statusText">&#27491;&#22312;&#21152;&#36733;&#34892;&#24773;...</span>
+              </div>
+              <div class="ohlc" id="ohlcText">O -- H -- L -- C --</div>
+              <div class="deal-row">
+                <button class="quote-box sell-box" type="button"><span id="sellQuote">--</span><small>&#21334;&#20986;</small></button>
+                <button class="quote-box buy-box" type="button"><span id="buyQuote">--</span><small>&#20080;&#20837;</small></button>
+              </div>
+              <div class="meta-row">
+                <span id="chartRange">--</span>
+                <span id="drawHint">&#28857;&#20987;&#22270;&#34920;&#28155;&#21152;&#30011;&#32447;</span>
+              </div>
+            </div>
+
+            <div id="mainChartStack" class="chart-stack">
+              <div class="chart-wrap">
+                <div id="priceChart" class="price-chart"></div>
+                <svg id="drawingLayer" class="drawing-layer" aria-hidden="true"></svg>
+              </div>
+              <div id="volumeChart" class="volume-chart"></div>
+            </div>
+
+            <div class="floating-lists">
+              <div id="priceLineList" class="compact-list"></div>
+              <div id="alertList" class="compact-list"></div>
+            </div>
+
+            <section id="strategySettingsPanel" class="settings-panel hidden" aria-label="ATR settings">
+              <div class="settings-head">
+                <strong>EMA+ATR 设置</strong>
+                <button id="closeStrategySettingsButton" class="icon-button" type="button" title="关闭">×</button>
+              </div>
+              <label>
+                <span>下边界线</span>
+                <select id="atrLowerModeInput">
+                  <option value="support">支撑</option>
+                  <option value="resistance">阻力</option>
+                </select>
+              </label>
+              <label>
+                <span>上边界线</span>
+                <select id="atrUpperModeInput">
+                  <option value="resistance">阻力</option>
+                  <option value="support">支撑</option>
+                </select>
+              </label>
+              <label>
+                <span>EMA 周期</span>
+                <input id="atrEmaLengthInput" type="number" min="1" step="1" />
+              </label>
+              <label>
+                <span>ATR 周期</span>
+                <input id="atrLengthInput" type="number" min="1" step="1" />
+              </label>
+              <label>
+                <span>支撑/阻力长度</span>
+                <input id="atrMultiplierInput" type="number" min="0.1" step="0.1" />
+              </label>
+              <label>
+                <span>线条宽度</span>
+                <input id="atrLineWidthInput" type="number" min="1" max="10" step="1" />
+              </label>
+              <label>
+                <span>爆量倍数</span>
+                <input id="volumeSpikeMultiplierInput" type="number" min="0.1" step="0.1" />
+              </label>
+            </section>
+          </section>
+
+          <section id="secondaryPanel" class="secondary-panel">
+            <div class="mini-head">
+              <strong id="secondaryTitle">BTCUSDT 1H</strong>
+              <span id="secondaryRange">--</span>
+            </div>
+            <div id="secondaryChart" class="secondary-chart"></div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
