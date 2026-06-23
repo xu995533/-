@@ -1,0 +1,58 @@
+BTC网格回测 - 拷贝到U盘和公司电脑使用说明
+
+一、要拷贝哪个文件夹
+
+请把整个文件夹拷贝到U盘：
+
+C:\Users\xu\Documents\Codex\2026-06-20\c-users-xu-desktop-k-btc\outputs\btc-grid-backtester
+
+不要只拷贝桌面上的“启动BTC网格回测.lnk”快捷方式。那个快捷方式写的是家里电脑路径，换电脑容易失效。
+
+
+二、到公司电脑后放哪里
+
+把U盘里的“btc-grid-backtester”文件夹复制到公司电脑任意位置都可以，例如：
+
+D:\btc-grid-backtester
+
+或者：
+
+C:\Users\你的用户名\Desktop\btc-grid-backtester
+
+
+三、点哪个文件启动
+
+进入“btc-grid-backtester”文件夹，双击：
+
+点我启动BTC网格回测.cmd
+
+它会自动启动本地服务，并打开浏览器：
+
+http://127.0.0.1:4177/
+
+
+四、公司电脑需要什么
+
+公司电脑需要安装 Node.js，建议安装 LTS 版本。
+
+如果公司电脑没有 Node.js，双击启动文件时会提示 Node.js was not found。
+
+安装好 Node.js 后，再双击“点我启动BTC网格回测.cmd”即可。
+
+
+五、哪些文件夹要保留
+
+public、server.mjs、package.json、package-lock.json、node_modules 都要保留。
+
+node_modules 建议一起拷贝到U盘，这样公司电脑不用重新下载依赖。
+
+logs 文件夹是运行日志，可以保留，也可以删除；软件启动后会自动重新生成。
+
+
+六、遇到打不开怎么办
+
+1. 确认公司电脑已经安装 Node.js。
+2. 确认是双击“点我启动BTC网格回测.cmd”，不是桌面旧快捷方式。
+3. 浏览器手动打开 http://127.0.0.1:4177/
+4. 如果端口被占用，重启电脑后再试。
+5. 如果行情或数据加载失败，可能是公司网络限制相关数据源。

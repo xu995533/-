@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BTC 网格回测</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/vendor/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1>策略实验台</h1>
+          <p id="statusText">等待运行</p>
+          <div class="quickbar" aria-label="快捷切换">
+            <div class="segment" aria-label="交易对">
+              <button class="quick-button" type="button" data-symbol="BTCUSDT">BTCUSDT</button>
+              <button class="quick-button" type="button" data-symbol="ETHUSDT">ETHUSDT</button>
+            </div>
+            <div class="segment" aria-label="周期">
+              <button class="quick-button" type="button" data-interval="5m">5分</button>
+              <button class="quick-button" type="button" data-interval="15m">15分</button>
+              <button class="quick-button" type="button" data-interval="30m">30分</button>
+              <button class="quick-button" type="button" data-interval="1h">60分</button>
+              <button class="quick-button" type="button" data-interval="4h">4小时</button>
+              <button class="quick-button" type="button" data-interval="1d">日</button>
+              <button class="quick-button" type="button" data-interval="1w">周</button>
+              <button class="quick-button" type="button" data-interval="1M">月</button>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button id="highlightOpenButton" class="ghost-button" type="button" aria-pressed="false">高亮未平仓</button>
+          <button id="saveSettingsButton" class="ghost-button" type="button">保存设置</button>
+          <button id="optimizeButton" class="ghost-button" type="button">优化网格</button>
+          <button id="runButton" type="button">运行回测</button>
+        </div>
+      </header>
+
+      <section class="panel chart-panel">
+        <div class="panel-head">
+          <h2>K 线可视化</h2>
+          <span>本地网格标记</span>
+        </div>
+        <div class="chart-wrap">
+          <div id="priceChart" class="price-chart"></div>
+        </div>
+      </section>
+
+      <section class="panel console-panel">
+        <div class="panel-head">
+          <h2>回测控制台</h2>
+          <span>Grid v1</span>
+        </div>
+        <div class="control-grid">
+          <label>
+            交易对
+            <input id="symbol" value="BTCUSDT" />
+          </label>
+          <label>
+            周期
+            <select id="interval">
+              <option value="1m">1m</option>
+              <option value="3m">3m</option>
+              <option value="5m" selected>5m</option>
+              <option value="15m">15m</option>
+              <option value="30m">30m</option>
+              <option value="1h">1h</option>
+              <option value="4h">4h</option>
+              <option value="1d">1d</option>
+              <option value="1w">1w</option>
+              <option value="1M">1M</option>
+            </select>
+          </label>
+          <label>
+            成交路径
+            <select id="pathMode">
+              <option value="smart" selected>按开盘距离推断</option>
+              <option value="downFirst">先跌后涨</option>
+              <option value="upFirst">先涨后跌</option>
+            </select>
+          </label>
+          <label>
+            开始时间
+            <input id="start" type="datetime-local" />
+          </label>
+          <label>
+            结束时间
+            <input id="end" type="datetime-local" />
+          </label>
+          <label>
+            网格下限
+            <input id="lower" type="number" step="10" value="62000" />
+          </label>
+          <label>
+            网格上限
+            <input id="upper" type="number" step="10" value="66000" />
+          </label>
+          <label>
+            网格间距 USDT
+            <input id="gridStep" type="number" min="1" step="10" value="100" />
+          </label>
+          <label>
+            初始本金 USDT
+            <input id="capital" type="number" min="10" step="10" value="1000" />
+          </label>
+          <label>
+            杠杆
+            <input id="leverage" type="number" min="1" max="125" value="10" />
+          </label>
+          <label>
+            每格名义金额
+            <input id="orderUsdt" type="number" min="1" step="1" value="25" />
+          </label>
+          <label>
+            单边手续费
+            <input id="feeRate" type="number" min="0" max="0.01" step="0.0001" value="0" />
+          </label>
+        </div>
+
+        <div class="stats-block">
+          <h3>回测结果</h3>
+          <dl id="statsList"></dl>
+        </div>
+      </section>
+
+      <section class="panel optimize-panel">
+        <div class="panel-head">
+          <h2>优化实验</h2>
+          <span id="optimizeStatus">未运行</span>
+        </div>
+        <div class="optimizer-controls">
+          <label>
+            最小间距
+            <input id="stepMin" type="number" min="1" value="50" />
+          </label>
+          <label>
+            最大间距
+            <input id="stepMax" type="number" min="1" value="300" />
+          </label>
+        </div>
+        <div id="bestBox" class="best-box">等待优化</div>
+        <div class="table-scroll compact-table">
+          <table>
+            <thead>
+              <tr>
+                <th>排名</th>
+                <th>间距</th>
+                <th>格数</th>
+                <th>收益</th>
+                <th>回撤</th>
+                <th>胜率</th>
+              </tr>
+            </thead>
+            <tbody id="optimizeRows"></tbody>
+          </table>
+        </div>
+        <div class="equity-strip">
+          <div id="equityChart" class="equity-chart"></div>
+        </div>
+      </section>
+
+      <section class="panel ledger-panel">
+        <div class="panel-head">
+          <h2>订单与仓位</h2>
+          <span id="ledgerStatus">等待成交</span>
+        </div>
+        <div class="ledger-grid">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>订单</th>
+                  <th>时间</th>
+                  <th>方向</th>
+                  <th>价格</th>
+                  <th>数量</th>
+                  <th>手续费</th>
+                  <th>利润</th>
+                </tr>
+              </thead>
+              <tbody id="tradeRows"></tbody>
+            </table>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>未平仓</th>
+                  <th>开仓价</th>
+                  <th>数量</th>
+                </tr>
+              </thead>
+              <tbody id="openRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

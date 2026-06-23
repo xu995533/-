@@ -1,0 +1,11 @@
+{
+  "name": "btc-grid-backtester",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "lightweight-charts": "^4.2.3"
+  }
+}
