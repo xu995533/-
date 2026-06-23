@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polyrec 监控台</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Polyrec 监控台</h1>
+      <div class="sub" id="marketSlug">正在连接 Polymarket...</div>
+    </div>
+    <div class="controls" role="group" aria-label="周期切换">
+      <button id="tf15" class="seg active" type="button">15分钟</button>
+      <button id="tf1h" class="seg" type="button">1小时</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel summary">
+      <div class="metric">
+        <span>剩余时间</span>
+        <strong id="timeLeft">--</strong>
+      </div>
+      <div class="metric">
+        <span>UP 买入价</span>
+        <strong id="upAsk">--</strong>
+      </div>
+      <div class="metric">
+        <span>DOWN 买入价</span>
+        <strong id="downAsk">--</strong>
+      </div>
+      <div class="metric">
+        <span>数据年龄</span>
+        <strong id="age">--</strong>
+      </div>
+    </section>
+
+    <section class="panel wide history-panel">
+      <div class="panel-head">
+        <h2>每小时历史蓝线</h2>
+        <span id="historyStatus">未开始</span>
+      </div>
+      <div class="history-controls">
+        <label>
+          <span>最近小时数</span>
+          <input id="historyHours" type="number" min="1" max="1500" step="1" value="100">
+        </label>
+        <label>
+          <span>买入阈值</span>
+          <input id="historyThreshold" type="number" min="0.01" max="0.99" step="0.01" value="0.30">
+        </label>
+        <button id="historyStart" class="primary-btn" type="button">开始统计</button>
+      </div>
+      <div class="history-summary">
+        <div class="stat"><span>有效市场</span><strong id="histValid">--</strong></div>
+        <div class="stat"><span>触发次数</span><strong id="histTouches">--</strong></div>
+        <div class="stat"><span>触发后赢</span><strong id="histWins">--</strong></div>
+        <div class="stat"><span>胜率</span><strong id="histWinRate">--</strong></div>
+        <div class="stat"><span>UP 触发/赢</span><strong id="histUp">--</strong></div>
+        <div class="stat"><span>DOWN 触发/赢</span><strong id="histDown">--</strong></div>
+      </div>
+      <div class="kv">
+        <span>历史CSV</span>
+        <code id="historyCsv">--</code>
+      </div>
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>市场</th>
+            <th>结果</th>
+            <th>UP 最低/最高</th>
+            <th>DOWN 最低/最高</th>
+            <th id="historyTriggerHead">阈值触发</th>
+          </tr>
+        </thead>
+        <tbody id="historyRows">
+          <tr><td colspan="5">暂无数据</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel book-panel">
+      <div class="panel-head">
+        <h2>UP 盘口</h2>
+        <span id="upMeta">--</span>
+      </div>
+      <div class="book-grid">
+        <div>
+          <div class="book-title bid">买盘 Bids</div>
+          <table><tbody id="upBids"></tbody></table>
+        </div>
+        <div>
+          <div class="book-title ask">卖盘 Asks</div>
+          <table><tbody id="upAsks"></tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel book-panel">
+      <div class="panel-head">
+        <h2>DOWN 盘口</h2>
+        <span id="downMeta">--</span>
+      </div>
+      <div class="book-grid">
+        <div>
+          <div class="book-title bid">买盘 Bids</div>
+          <table><tbody id="downBids"></tbody></table>
+        </div>
+        <div>
+          <div class="book-title ask">卖盘 Asks</div>
+          <table><tbody id="downAsks"></tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>深度与套利</h2>
+        <span id="csvState">--</span>
+      </div>
+      <div class="stats-grid">
+        <div class="stat"><span>UP 深度</span><strong id="upDepth">--</strong></div>
+        <div class="stat"><span>DOWN 深度</span><strong id="downDepth">--</strong></div>
+        <div class="stat"><span>UP 不平衡</span><strong id="upImb">--</strong></div>
+        <div class="stat"><span>DOWN 不平衡</span><strong id="downImb">--</strong></div>
+        <div class="stat"><span>UP 微价格</span><strong id="upMicro">--</strong></div>
+        <div class="stat"><span>DOWN 微价格</span><strong id="downMicro">--</strong></div>
+      </div>
+      <table class="arb">
+        <thead>
+          <tr><th>档位</th><th>UP bid + DOWN bid</th><th>空间</th></tr>
+        </thead>
+        <tbody id="arbRows"></tbody>
+      </table>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-head">
+        <h2>状态</h2>
+        <span id="status">--</span>
+      </div>
+      <div class="kv">
+        <span>CSV 文件</span>
+        <code id="logFile">--</code>
+      </div>
+      <div class="kv">
+        <span>Token</span>
+        <code id="tokens">--</code>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

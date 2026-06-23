@@ -1,0 +1,2 @@
+timestamp_ms,market_slug,timeframe,time_till_end,seconds_till_end,up_best_bid,up_best_ask,down_best_bid,down_best_ask,up_spread,down_spread,up_bid_depth5,up_ask_depth5,down_bid_depth5,down_ask_depth5,up_imbalance,down_imbalance,up_microprice,down_microprice,arb_bid_sum_l1,arb_edge_l1
+1782167432183,btc-updown-15m-1782167400,1h,29:28,1768,0.55,0.56,0.44,0.45,0.010000000000000009,0.010000000000000009,902.8,1753.73,2397.83,1089.17,-0.320316352535074,0.3752968167479208,0.5501342948847079,0.4490965018094089,0.99,0.010000000000000009

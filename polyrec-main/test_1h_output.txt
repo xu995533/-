@@ -1,0 +1,617 @@
+[CONFIG] Monitoring BTC 1h market. Logs: logs_1h_test
+[LOGGER] Initialized. Output: logs_1h_test
+c[06:23:58] Dashboard ©¦ ENDS: 36:02 (2162s) ©¦ PM_UP:     ¡ª ©¦ PM_DN:     ¡ª
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:    ¡ª    ©¦ DN:    ¡ª     (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (ask-bid, taker cost)
+MICROPRICE©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (weighted mid)
+OB SLOPE  ©¦ UP: Bid:  ¡ª   Ask:  ¡ª   ©¦ DN: Bid:  ¡ª   Ask:  ¡ª    (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid:   0 Ask:   0 DN©¦Bid:   0 Ask:   0
+  ¡ª                    ¡ª                                           
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    ARBS (UP+DN BID):
+  ¡ª                    ¡ª                                           L1:0.000 +1.000
+                                                                   L2:0.000 +1.000
+                                                                   L3:0.000 +1.000
+                                                                   L4:0.000 +1.000
+                                                                   L5:0.000 +1.000
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit
+[PM-REST] Polling 1h market bitcoin-up-or-down-june-22-2026-6pm-et
+[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2164s
+c[06:23:58] Dashboard ©¦ ENDS: 36:02 (2162s) ©¦ PM_UP:     ¡ª ©¦ PM_DN:     ¡ª
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:    ¡ª    ©¦ DN:    ¡ª     (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (ask-bid, taker cost)
+MICROPRICE©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (weighted mid)
+OB SLOPE  ©¦ UP: Bid:  ¡ª   Ask:  ¡ª   ©¦ DN: Bid:  ¡ª   Ask:  ¡ª    (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid:   0 Ask:   0 DN©¦Bid:   0 Ask:   0
+  ¡ª                    ¡ª                                           
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    ARBS (UP+DN BID):
+  ¡ª                    ¡ª                                           L1:0.000 +1.000
+                                                                   L2:0.000 +1.000
+                                                                   L3:0.000 +1.000
+                                                                   L4:0.000 +1.000
+                                                                   L5:0.000 +1.000
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2163s
+c[06:23:59] Dashboard ©¦ ENDS: 36:01 (2161s) ©¦ PM_UP:     ¡ª ©¦ PM_DN:     ¡ª
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:    ¡ª    ©¦ DN:    ¡ª     (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (ask-bid, taker cost)
+MICROPRICE©¦ UP:   ¡ª    ©¦ DN:   ¡ª     (weighted mid)
+OB SLOPE  ©¦ UP: Bid:  ¡ª   Ask:  ¡ª   ©¦ DN: Bid:  ¡ª   Ask:  ¡ª    (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid:   0 Ask:   0 DN©¦Bid:   0 Ask:   0
+  ¡ª                    ¡ª                                           
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    ARBS (UP+DN BID):
+  ¡ª                    ¡ª                                           L1:0.000 +1.000
+                                                                   L2:0.000 +1.000
+                                                                   L3:0.000 +1.000
+                                                                   L4:0.000 +1.000
+                                                                   L5:0.000 +1.000
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2163s
+[LOGGER] Started logging to: logs_1h_test\bitcoin-up-or-down-june-22-2026-6pm-et.csv
+c[06:23:59] Dashboard ©¦ ENDS: 36:01 (2161s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2162s
+c[06:24:00] Dashboard ©¦ ENDS: 36:00 (2160s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2162s
+c[06:24:00] Dashboard ©¦ ENDS: 36:00 (2160s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2162s
+[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2161s
+c[06:24:01] Dashboard ©¦ ENDS: 35:59 (2159s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2161s
+c[06:24:01] Dashboard ©¦ ENDS: 35:59 (2159s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2160s
+c[06:24:02] Dashboard ©¦ ENDS: 35:58 (2158s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2160s
+c[06:24:02] Dashboard ©¦ ENDS: 35:58 (2158s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.443 ©¦ DN:  +0.433  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.685  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.22 Ask: 0.32  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 850 Ask:2203 DN©¦Bid:2203 Ask: 870
+  0.31¡ú135             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú196             0.66¡ú870                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú569                                    L2:0.970 +0.030
+  0.27¡ú216             0.64¡ú290                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú189             0.69¡ú155                                    L5:0.910 +0.090
+  0.33¡ú285             0.70¡ú119               
+  0.34¡ú870             0.71¡ú196               
+  0.35¡ú559             0.72¡ú185               
+  0.36¡ú300             0.73¡ú216               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2160s
+[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2159s
+c[06:24:03] Dashboard ©¦ ENDS: 35:57 (2157s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  -4.8 Ask:  +3.2
+          ©¦ DN: Bid:  +3.2 Ask: -11.2  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2159s
+c[06:24:03] Dashboard ©¦ ENDS: 35:57 (2157s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  -4.8 Ask:  +3.2
+          ©¦ DN: Bid:  +3.2 Ask: -11.2  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2158s
+c[06:24:04] Dashboard ©¦ ENDS: 35:56 (2156s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  -4.8 Ask:  +3.2
+          ©¦ DN: Bid:  +3.2 Ask: -11.2  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2158s
+c[06:24:04] Dashboard ©¦ ENDS: 35:56 (2156s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2158s
+[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2157s
+c[06:24:05] Dashboard ©¦ ENDS: 35:55 (2155s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2157s
+c[06:24:05] Dashboard ©¦ ENDS: 35:55 (2155s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2156s
+c[06:24:06] Dashboard ©¦ ENDS: 35:54 (2154s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.69
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.452 ©¦ DN:  +0.452  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.686  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.29 Ask: 0.21 ©¦ DN: Bid: 0.21 Ask: 0.29  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:   ¡ª   Ask:   ¡ª  
+          ©¦ DN: Bid:   ¡ª   Ask:   ¡ª    (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 835 Ask:2213 DN©¦Bid:2213 Ask: 835
+  0.31¡ú120             0.68¡ú184                                    
+  0.30¡ú119             0.67¡ú290                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.66¡ú875                                    L1:0.990 +0.010
+  0.28¡ú185             0.65¡ú564                                    L2:0.970 +0.030
+  0.27¡ú221             0.64¡ú300                                    L3:0.950 +0.050
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.930 +0.070
+  0.32¡ú184             0.69¡ú120                                    L5:0.910 +0.090
+  0.33¡ú290             0.70¡ú119               
+  0.34¡ú875             0.71¡ú191               
+  0.35¡ú564             0.72¡ú185               
+  0.36¡ú300             0.73¡ú221               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2156s
+c[06:24:06] Dashboard ©¦ ENDS: 35:54 (2154s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.72
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.441 ©¦ DN:  +0.733  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.719  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.13 Ask: 0.04  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  +5.2 Ask:  -1.3
+          ©¦ DN: Bid:-184.4 Ask:-157.9  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 855 Ask:2208 DN©¦Bid:1508 Ask: 232
+  0.31¡ú120             0.71¡ú80                                     
+  0.30¡ú139             0.70¡ú120                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.69¡ú406                                    L1:1.020 -0.020
+  0.28¡ú185             0.68¡ú648                                    L2:1.000  0.000
+  0.27¡ú221             0.67¡ú255                                    L3:0.980 +0.020
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.960 +0.040
+  0.32¡ú189             0.72¡ú5                                      L5:0.940 +0.060
+  0.33¡ú290             0.73¡ú5                 
+  0.34¡ú875             0.74¡ú5                 
+  0.35¡ú564             0.75¡ú102               
+  0.36¡ú290             0.76¡ú115               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2155s
+[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2155s
+c[06:24:07] Dashboard ©¦ ENDS: 35:53 (2153s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.72
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.441 ©¦ DN:  +0.733  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.719  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.13 Ask: 0.04  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  +5.2 Ask:  -1.3
+          ©¦ DN: Bid:-184.4 Ask:-157.9  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 855 Ask:2208 DN©¦Bid:1508 Ask: 232
+  0.31¡ú120             0.71¡ú80                                     
+  0.30¡ú139             0.70¡ú120                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.69¡ú406                                    L1:1.020 -0.020
+  0.28¡ú185             0.68¡ú648                                    L2:1.000  0.000
+  0.27¡ú221             0.67¡ú255                                    L3:0.980 +0.020
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.960 +0.040
+  0.32¡ú189             0.72¡ú5                                      L5:0.940 +0.060
+  0.33¡ú290             0.73¡ú5                 
+  0.34¡ú875             0.74¡ú5                 
+  0.35¡ú564             0.75¡ú102               
+  0.36¡ú290             0.76¡ú115               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit[PM] Connected to 1h market bitcoin-up-or-down-june-22-2026-6pm-et, reconnecting in 2155s
+c[06:24:07] Dashboard ©¦ ENDS: 35:53 (2153s) ©¦ PM_UP:  0.32 ©¦ PM_DN:  0.72
+¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T
+RETURNS   ©¦ Ret1s¡Á100:    ¡ª    ©¦ Ret5s¡Á100:    ¡ª   
+VOLATILITY©¦ ATR5s:      ¡ª ©¦ ATR30s:      ¡ª ©¦ RVol30s:        ¡ª
+VOLUME    ©¦ V1s:       ¡ª ©¦ V5s:       ¡ª ©¦ VolMA30s:       ¡ª ©¦ Spike:     ¡ª
+VWAP      ©¦ VWAP30s:      ¡ª ©¦ P/VWAP5s:    ¡ª    ©¦ P/VWAP30s:    ¡ª   
+
+ORDERBOOK ANALYTICS:
+IMBALANCE ©¦ UP:  -0.441 ©¦ DN:  +0.733  (>0=bid pressure, <0=ask pressure)
+SPREAD    ©¦ UP:  0.010 ©¦ DN:  0.010  (ask-bid, taker cost)
+MICROPRICE©¦ UP:  0.314 ©¦ DN:  0.719  (weighted mid)
+OB SLOPE  ©¦ UP: Bid: 0.30 Ask: 0.22 ©¦ DN: Bid: 0.13 Ask: 0.04  (>0.6=wall)
+EAT-FLOW/s©¦ UP: Bid:  +5.2 Ask:  -1.3
+          ©¦ DN: Bid:-184.4 Ask:-157.9  (negative=eaten)
+
+POLYMARKET ORDERBOOK                          DEPTH & ARBITRAGE
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤      ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+UP ©¦ BIDS:           DN ©¦ BIDS:               UP©¦Bid: 855 Ask:2208 DN©¦Bid:1508 Ask: 232
+  0.31¡ú120             0.71¡ú80                                     
+  0.30¡ú139             0.70¡ú120                                    ARBS (UP+DN BID):
+  0.29¡ú191             0.69¡ú406                                    L1:1.020 -0.020
+  0.28¡ú185             0.68¡ú648                                    L2:1.000  0.000
+  0.27¡ú221             0.67¡ú255                                    L3:0.980 +0.020
+UP ©¦ ASKS:           DN ©¦ ASKS:                                    L4:0.960 +0.040
+  0.32¡ú189             0.72¡ú5                                      L5:0.940 +0.060
+  0.33¡ú290             0.73¡ú5                 
+  0.34¡ú875             0.74¡ú5                 
+  0.35¡ú564             0.75¡ú102               
+  0.36¡ú290             0.76¡ú115               
+
+©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Ctrl+C to exit

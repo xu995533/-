@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polyrec - BTC实时看板</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","Segoe UI",sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7}
+.hero{background:linear-gradient(135deg,#10b981,#06b6d4);padding:60px 20px;text-align:center}
+.hero h1{font-size:2.2rem;margin-bottom:10px;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.hero p{font-size:1.1rem;opacity:.9}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+.section-title{font-size:1.4rem;font-weight:700;margin:40px 0 20px;padding-bottom:10px;border-bottom:2px solid #10b981;color:#10b981}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px}
+.feature-card{background:#1e293b;border-radius:12px;padding:20px;display:flex;gap:14px;border:1px solid #334155;transition:transform .2s}
+.feature-card:hover{transform:translateY(-3px);border-color:#10b981}
+.feature-icon{font-size:1.8rem;flex-shrink:0}
+.feature-name{font-size:1.05rem;font-weight:700;margin-bottom:4px;color:#10b981}
+.feature-desc{font-size:.9rem;color:#94a3b8;margin-bottom:6px}
+.feature-file{font-size:.8rem;color:#64748b;font-family:Consolas,monospace}
+.steps{display:flex;flex-direction:column;gap:14px}
+.step{display:flex;align-items:flex-start;gap:14px;background:#1e293b;border-radius:10px;padding:16px 20px;border-left:4px solid #10b981}
+.step-num{background:#10b981;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.step-text{font-size:.95rem;padding-top:3px}
+.warning-box{background:#7f1d1d;border-radius:10px;padding:20px;margin-top:20px}
+.warning-box h3{color:#fca5a5;margin-bottom:12px;font-size:1.1rem}
+.warning-item{font-size:.9rem;margin-bottom:8px;color:#fecaca}
+.launch-bar{background:#1e293b;border-radius:12px;padding:24px;text-align:center;margin:30px 0;border:2px solid #10b981}
+.bat-name{font-family:Consolas,monospace;font-size:1.1rem;color:#10b981;font-weight:700;margin:8px 0}
+.hint{font-size:.85rem;color:#94a3b8}
+footer{text-align:center;padding:30px;color:#475569;font-size:.85rem;border-top:1px solid #1e293b}
+@media(max-width:600px){.feature-grid{grid-template-columns:1fr}.hero h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Polyrec - BTC实时看板</h1>
+<p>Polymarket BTC 15分钟涨跌预测市场实时终端看板</p>
+</div>
+<div class="container">
+<div class="launch-bar">
+<div style="font-size:.9rem;color:#94a3b8">🚀 启动方式</div>
+<div class="bat-name">start-btc-dashboard.bat</div>
+<div class="hint">双击本文件夹内的这个 .bat 文件即可启动</div>
+</div>
+<h2 class="section-title">💡 功能列表</h2>
+<div class="feature-grid">
+<div class="feature-card"><div class="feature-icon">⚡</div><div><div class="feature-name">实时终端看板</div><div class="feature-desc">终端界面实时显示BTC价格、订单簿、技术指标</div><div class="feature-file">📄 dash.py</div></div></div>
+<div class="feature-card"><div class="feature-icon">📊</div><div><div class="feature-name">Chainlink预言机</div><div class="feature-desc">通过Chainlink预言机获取BTC/USD实时价格</div><div class="feature-file">📄 dash.py (Chainlink RTDS)</div></div></div>
+<div class="feature-card"><div class="feature-icon">🔍</div><div><div class="feature-name">币安行情接入</div><div class="feature-desc">WebSocket接入币安BTCUSDT 1秒K线价格和成交量</div><div class="feature-file">📄 dash.py (Binance WebSocket)</div></div></div>
+<div class="feature-card"><div class="feature-icon">🧠</div><div><div class="feature-name">Polymarket订单簿</div><div class="feature-desc">实时显示UP/DOWN市场的订单簿深度</div><div class="feature-file">📄 dash.py (Polymarket WebSocket)</div></div></div>
+<div class="feature-card"><div class="feature-icon">📈</div><div><div class="feature-name">技术指标计算</div><div class="feature-desc">自动计算收益率、ATR、VWAP、成交量异常等指标</div><div class="feature-file">📄 dash.py</div></div></div>
+<div class="feature-card"><div class="feature-icon">🔧</div><div><div class="feature-name">自动CSV记录</div><div class="feature-desc">每个15分钟市场自动记录CSV日志</div><div class="feature-file">📄 dash.py</div></div></div>
+<div class="feature-card"><div class="feature-icon">📱</div><div><div class="feature-name">余额复制回测</div><div class="feature-desc">模拟余额复制策略的表现</div><div class="feature-file">📄 replicate_balance.py</div></div></div>
+<div class="feature-card"><div class="feature-icon">🚀</div><div><div class="feature-name">脉冲反转回测</div><div class="feature-desc">测试脉冲fade策略的回测结果</div><div class="feature-file">📄 fade_impulse_backtest.py</div></div></div>
+<div class="feature-card"><div class="feature-icon">📦</div><div><div class="feature-name">策略可视化</div><div class="feature-desc">将回测结果生成可视化图表</div><div class="feature-file">📄 visualize_fade_impulse.py</div></div></div>
+</div>
+<h2 class="section-title">📝 使用步骤</h2>
+<div class="steps">
+<div class="step"><div class="step-num">1</div><div class="step-text">双击本文件夹内的 start-btc-dashboard.bat 启动看板</div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text">终端会显示实时BTC行情和Polymarket订单簿</div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text">按 Ctrl+C 停止看板</div></div>
+<div class="step"><div class="step-num">4</div><div class="step-text">回测：uv run python replicate_balance.py 运行余额复制回测</div></div>
+<div class="step"><div class="step-num">5</div><div class="step-text">可视化：uv run python visualize_fade_impulse.py 查看策略图表</div></div>
+</div>
+<h2 class="section-title">⚠️ 注意事项</h2>
+<div class="warning-box">
+<h3>🛡 安全提醒</h3>
+<div class="warning-item">⚠️ 需要联网才能获取实时行情数据</div>
+<div class="warning-item">⚠️ Chainlink价格源需要Node.js脚本(chainlink/btc-feed.js)，当前可能缺失</div>
+<div class="warning-item">⚠️ 看板仅用于观察行情，不涉及交易</div>
+<div class="warning-item">⚠️ 回测工具用于研究，结果不代表未来收益</div>
+</div>
+</div>
+<footer>本页面由本地生成 · 双击文件夹内的 .bat 文件启动对应程序</footer>
+</body>
+</html>
